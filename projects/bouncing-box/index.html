@@ -36,7 +36,7 @@
 			/////////////////// SETUP DO NOT DELETE //////////////////////////
 			//////////////////////////////////////////////////////////////////
 			
-			var box = jQuery('.box');	// reference to the HTML .box element
+			var box = jQuery();	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
 
@@ -62,42 +62,42 @@
 			
 			// TODO 2 - Variable declarations 
 			var positionX = 0;
-			
-			
+			var points = 0;
+			var speed = 10
+		
 			/*
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/ 
-			function update(20) [
-			/*I want to increase positionX by 10 here*/
-			moveBoxTo(positionX); 
-			};
-			var positionX = 0 
+			function update() {
+				
+			moveBoxTo(50);
+
+			moveBoxTo(150);
+
+			moveBoxTo(250)
+
+			moveBoxTo(350)
+			
+			moveBoxTo(150)
+
+			moveBoxTo(50)
+			
+
+			//Frame 6
+			positionX = -50
+			boardWidth = 500
+			speed = -100
+
+			//Frame 6.5
+			positionX = -50
+			boardWidth = 500
+			speed = 100
+
+			}
 	        
-			//during update...
-			//Frame 1 
-			positionX = 0 + 10;
-			positionX = 10
-			moveBoxTo(positionX);
-
-			//Frame 2
-			positionX = 10 + 10;
-			positionX = 20
-			moveToBox (positionX);
-
-			//frame 3
-			positionX = 20 + 10;
-			positionx = 30
-			moveToBox(positionX);
-
-			//Frame 4 
-			positionX = 30 + 10;
-			positionX = 40
-			moveToBox(positionX);
-
-			//so on..,
-	
+			
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
@@ -105,9 +105,13 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
+				positionX = 0;
+				changeBoxText(1);
 
+				//my points increase by 1
 
+				changeBoxText(0);
+				positionX = positionX + 10;
 			};
 		})();
 	</script>
